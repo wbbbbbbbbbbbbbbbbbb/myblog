@@ -85,7 +85,6 @@ a{
   text-align: left;
   box-shadow: 0 0 20px rgba(0,37,55,.05);
 }
-
 .blogProject>ul>li>ul{
   margin-top: 10px;
 }
