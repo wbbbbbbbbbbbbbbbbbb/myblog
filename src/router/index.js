@@ -13,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'blogBody',
-      redirect: 'blogBody'
+      name: 'blogMe',
+      redirect: 'blogMe'
     }, {
       path: '/blogBody',
       name: 'blogBody',

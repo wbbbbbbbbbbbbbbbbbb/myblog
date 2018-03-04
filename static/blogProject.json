@@ -1,30 +1,5 @@
-<template>
-  <div class="blogProject">
-    <ul>
-      <li v-for="project in blogProjectData">
-        <h2 style="paddingBottom:10px;">{{project.title}}</h2>
-        <hr>
-        <ul>
-          <li v-for="pro in project.valueTitle">
-            <h2>{{pro.Ttitle}}</h2>
-            <p v-for="p in pro.Tvalue">{{p.T}}</p>
-            <a :href="pro.Tlink" target="_blank" >{{pro.Tlink}}</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</template>
-
-<script>
-import axios from 'axios'
-
-export default {
-  name: 'blogProject',
-  data () {
-    return {
-      blogProjectData:[
-        {
+[
+  {
     "title": "个人博客项目",
     "valueTitle": [
       {
@@ -59,42 +34,4 @@ export default {
       }
     ]
   }
-      ]
-    }
-  },
-  created() {
-    // 访问服务器文件，应该把json文件放在最外层的static文件夹，这个文件夹是vue-cli内置服务器向外暴露的静态文件夹
-    axios.get("../static/blogProject.json",{})
-    .then(response=>{
-         this.blogProjectData=response.data;
-    })
-  }
-}
-</script>
-
-<style>
-a{
-  text-decoration: none;
-  color: #2c3e50;
-}
-.blogProject>ul>li{
-  width: 800px;
-  padding: 20px;
-  margin: 10px auto;
-  background: white;
-  text-align: left;
-  box-shadow: 0 0 20px rgba(0,37,55,.05);
-}
-.blogProject>ul>li>ul{
-  margin-top: 10px;
-}
-.blogProject>ul>li>ul>li{
-  margin-bottom: 10px;
-}
-.blogProject>ul>li>ul>li>p{
-  font-size: 15px;
-}
-.blogProject>ul>li>ul>li>a{
-  font-size: 15px;
-}
-</style>
+]

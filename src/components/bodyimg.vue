@@ -3,7 +3,7 @@
     <div class="userFont">
       <div class="imgbox">
         <h1>Wing的博客</h1>
-        <h2>To be nub.1</h2>
+        <h2>在秃头的边缘试探</h2>
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@ export default {
 .bodyimg{
   width: 100%;
   height: 548px;
-  background: url("../assets/bgimg.jpg") no-repeat;
+  background: url("../assets/bgimg.png") no-repeat;
   background-size: 100%;
   /* 固定背景图不随滚动条移动 */
   background-attachment: fixed;

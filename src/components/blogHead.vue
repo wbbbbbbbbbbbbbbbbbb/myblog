@@ -2,31 +2,44 @@
   <div class="blogHead">
     <ul class="head">
       <img src="../assets/qi.png" alt="">
-      <li v-for="nav in navs"><router-link :to="nav.rou">{{nav.title}}</router-link></li>
+      <li v-for="nav in blogHeadData.navs"><router-link :to="nav.rou">{{nav.title}}</router-link></li>
       <ul class="headRight">
-        <li v-for="more in mores"><a :href="more.url" target="_blank">{{more.title}}</a></li>
+        <li v-for="more in blogHeadData.mores"><a :href="more.url" target="_blank">{{more.title}}</a></li>
       </ul>
     </ul>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'blogHead',
   data () {
     return {
-      navs:[
-        {title: "首页", rou: "blogBody"},
-        {title: "文章", rou: "writings"},
-        {title: "项目", rou: "blogProject"},
-        {title: "留言板", rou: "blogMessage"},
-        {title: "关于我", rou: "blogMe"}
-      ],
-      mores: [
-        {title: "CSDN", url: "http://blog.csdn.net/webbingAndKami"},
-        {title: "gitHub", url: "https://github.com/dashboard"},
-      ]
+      blogHeadData:{
+
+  "navs":[
+    {"title": "首页", "rou": "blogBody"},
+    {"title": "文章", "rou": "writings"},
+    {"title": "项目", "rou": "blogProject"},
+    {"title": "留言板", "rou": "blogMessage"},
+    {"title": "关于我", "rou": "blogMe"}
+  ],
+  "mores":[
+    {"title": "CSDN", "url": "http://blog.csdn.net/webbingAndKami"},
+    {"title": "gitHub", "url": "https://github.com/webbingforkami"}
+  ]
+
+      },
     }
+  },
+  created() {
+    // 访问服务器文件，应该把json文件放在最外层的static文件夹，这个文件夹是vue-cli内置服务器向外暴露的静态文件夹
+    axios.get("../static/blogHead.json",{})
+    .then(response=>{
+         this.blogHeadData=response.data;
+    })
   }
 }
 </script>
@@ -65,10 +78,12 @@ export default {
 .head>li{
   float: left;
   margin-right: 15px;
+  font-size: 17px;
 }
-.head>li>a{
-  color: black;
+.head>li a{
   text-decoration: none;
+  color: #2c3e50;
+  font-size: 17px;
 }
 .headRight{
   float: right;
@@ -79,7 +94,8 @@ export default {
 }
 .headRight li a{
   text-decoration: none;
-  color: black
+  color: #2c3e50;
+  font-size: 17px;
 }
 @media only screen and (min-width: 450px) and (max-width: 800px) {
   .blogHead{

@@ -1,76 +1,115 @@
 <template>
-  <div class="blogBody">
-    <div class="body" style="clear:both">
-      <div class="bodyLeft">
-          <ul>
-            <li v-for="item in content">
-              <div class="Title"><h2>{{item.Title}}</h2></div>
-              <div class="attribute">{{item.attribute}}</div>
-              <div class="text" v-for="text in item.texts">{{text}}</div>
-            </li>
-          </ul>
+      <div class="meLeft">
+        <h1> For Me </h1>
+        <table class="basic">
+            <td align="right"><h2>"name" &nbsp:</h2></td>
+            <td> <h2>&nbsp "温伟彬",</h2> </td>
+          </tr>
+          <tr>
+            <td align="right"><h2>"sex" &nbsp:</h2></td>
+            <td><h2>&nbsp "男",</h2></td>
+          </tr>
+          <tr>
+            <td align="right"><h2>"age" &nbsp:</h2></td>
+            <td><h2>&nbsp 21</h2></td>
+          </tr>
+        </table>
+        <div class="skill">
+          <p>是一个大专<span>应届毕业生</span></p><span></span>
+          <p><span>熟悉h5+css3+js+vue全家桶</span></p>
+          <p>想找一份<span>web前端</span>的实习</p>
+        </div>
+        <div class="meimg">
+          <!-- <img src="../assets/line.jpg" alt=""> -->
+          <p>如何找到我？!</p>
+          <div class="wechat">
+            <img src="../assets/WeChat.png" alt="">
+            &lt / WeChat &gt
+          </div>
+          <span>
+            微信号：wwb13226779310<br>
+            phone：13226779310<br>
+            QQ:1158211734
+          </span>
+          <div class="qq">
+            <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1158211734&website=www.oicqzone.com"><i class="icon iconfont icon-qq"></i></a>
+            <img src="../assets/line2.jpg" alt="">
+            <a href="https://github.com/webbingforkami" target="_blank"><i class="icon iconfont icon-github"></i></a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: 'blogBody',
+  name: 'blogMe',
   data () {
     return {
-      content:[
-        {
-          Title: '关于我',
-          attribute: '时间：2018-2-24 0：28 | 标签：项目 | 阅读：2333',
-          texts: [
-            '技术栈: h5+css js vue vue-router',
-          ]
-        }
-      ]
+
     }
+  },
+  mounted() {
+    document.documentElement.scrollTop = document.body.scrollTop = 610;
   }
 }
 </script>
 
 <style>
-.blogBody{
+a{
+  text-decoration: none;
+  color: #2c3e50;
+}
+.basic{
+  margin: 30px auto;
+}
+.meimg{
   margin: 0 auto;
-  width: 800px;
-  overflow: hidden;
-  z-index: 999999999;
+  text-align: center;
+  font-size: 14px;
 }
-.bodyLeft{
+.meimg>p{
+  font-size: 24px;
+  margin: 20px 0;
+}
+.meimg>.wechat{
+  width: 100px;
+  margin: 10px auto;
+}
+.meimg .wechat>img{
+  width: 100px;
+  height: 100px;
+}
+.meimg>.qq{
+  margin-top: 30px;
+  height: 48px;
+}
+.meimg>.qq i{
+  font-size: 30px;
+  padding: 0 5px;
+}
+.meLeft{
   float: left;
-  width: 800px;
-}
-.bodyLeft li{
-  padding: 20px;
+  width: 100%;
+  height: 730px;
   margin: 10px 0;
   text-align: left;
   background: white;
   box-shadow: 0 1px 3px rgba(0,37,55,.05);
 }
-.bodyLeft li .attribute{
-  font-size: 13px;
-  color: #999999;
-  margin: 10px 0;
+.meLeft>h1{
+  text-align: center;
+  margin-top: 70px;
+  font-size: 50px;
 }
-.bodyLeft li .text{
-  margin: 10px 0;
+.skill{
+  text-align: center;
 }
-.bodyRight{
-  width: 150px;
-  height: 85%;
-  background: white;
-  box-shadow: 0 1px 3px rgba(0,37,55,.05);
-  padding: 20px;
-  float: right;
-  margin-top: 10px;
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: sticky;
-  top: 100px;
+.skill>p{
+  font-size: 16px;
+}
+.skill>p>span{
+  font-weight: bold;
+  font-size: 20px;
 }
 @media only screen and (max-width: 800px) {
   .blogBody{
@@ -78,9 +117,6 @@ export default {
   }
   .bodyLeft{
     width: 100%;
-  }
-  .bodyRight{
-    display: none;
   }
 }
 </style>
