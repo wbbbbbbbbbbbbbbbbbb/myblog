@@ -1,0 +1,57 @@
+[
+  {
+    "Title": "json相关知识点",
+    "attribute": "时间：2018-2-22 12：58 | 标签：任务 | 阅读：2333",
+    "texts": [
+      "Json是一种数据格式，不是编程语言，语法形式和js一样最重要的四点，bug通常地方：1.没有变量申明 2.没有末尾的分号，逗号等所有符号 3.对象的属性必须加 “双引号” ！"
+    ]
+  }, {
+    "Title": "成为大佬的方向",
+    "attribute": "时间：2018-2-22 12：58 | 标签：任务 | 阅读：2333",
+    "texts": [
+      "基础：HTML+CSS网站页面搭建，CS核心和PC端页面开发，HTML5移动端页面开发",
+      "核心：web前端核心技术JavaScript，ecmasript，dom，ajax，json，正则，作用域，运动框架，核心算法，高级函数，插件封装，jQuery等。",
+      "高级：html5+高级JavaScript开发，大数据可视化，webapp交互接口，lbs定位，微信sdk，es6标准，高级算法，数据结构，插件封装。",
+      "框架：vue、react、angular企业开发应用。",
+      "企业要求：bootstrap，swiper，iscroll，sass，ps切图，网站上线等。"
+    ]
+  }, {
+    "Title": "要实现的小任务",
+    "attribute": "时间：2018-2-22 12：58 | 标签：任务 | 阅读：2333",
+    "texts": [
+      "点赞，评论，回复",
+      "伪登录界面",
+      "分页以及相应跳页",
+      "懒加载",
+      "引入json",
+      "关闭页面加遮罩",
+      "实现回到顶部",
+      "移动端适配",
+      "后端axios",
+      "基本网站成型发布",
+      "导航栏玩一下position:sticky",
+      "回到顶部按钮移动出现，以及返回动画",
+      "首页的内容划分出 首页 和 文章,首页放版本更新以及小心得等，文章放相应文章以及csdn上的内容，给文章做个目录",
+      "小任务单独划分一个 todos 组件，位置在回顶上面，点击弹出，加遮罩",
+      "项目板块添加本网页的项目，分点：1.技术栈；2.项目介绍；3.收获；4.源代码；5.在线展示"
+    ]
+  }, {
+    "Title": "遇到的小知识点",
+    "attribute": "时间：2018-2-22 12：58 | 标签：get点 | 阅读：2333",
+    "texts": [
+      "1.父级元素如果有transform属性，会导致子元素的fixed失效。父元素去掉transform属性",
+      "2.v-for中图片不能用插值{{}}，要用绑定属性 :src=' ' ",
+      "3.子元素撑不起父元素: 清浮动 overflow: hidden;",
+      "4.a标签中加 <a href='javascript:;'> 能阻止浏览器的默认效果",
+      "5.position:fixed相对父级定位：fixed定位相对父级容器定位，不添加:top,bottom,left,right样式，通过margin定位",
+      "6.redirect重定向设置默认路由：{path: '/', redirect: 'goods'},{path: '/goods', component: goods},"   ,
+      "7.几个居中的小办法：1)text-align:center; 2)margin:0 auto; 3)position:absolute;left:0;right:0;margin:auto 父级要有position"   ,
+      "8.img里面添加 title='水果' 属性，鼠标移过去时会出现小提示",
+      "9.背景图固定不随滚动条移动 background-attachment: fixed;",
+      "10.div自适应文字宽度 display:inline-block;",
+      "11.标签中写大于小于号方法 '&lt &gt'",
+      "12.添加QQ好友的链接 tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1158211734&website=www.oicqzone.com",
+      "13.修改网页位置 document.documentElement.scrollTop = document.body.scrollTop = 0;"
+    ]
+  }
+]

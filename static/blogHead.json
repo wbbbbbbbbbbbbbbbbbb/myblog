@@ -1,0 +1,14 @@
+{
+  "navs":[
+    {"title": "首页", "rou": "blogBody"},
+    {"title": "文章", "rou": "writings"},
+    {"title": "项目", "rou": "blogProject"},
+    {"title": "留言板", "rou": "blogMessage"},
+    {"title": "关于我", "rou": "blogMe"}
+  ],
+  "mores":[
+    {"title": "CSDN", "url": "http://blog.csdn.net/webbingAndKami"},
+    {"title": "gitHub", "url": "https://github.com/webbingforkami"}
+  ]
+}
+
