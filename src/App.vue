@@ -34,5 +34,6 @@ export default {
 }
 .box{
   background: #f7f8fa;
+  display: block;
 }
 </style>
