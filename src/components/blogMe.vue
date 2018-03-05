@@ -1,5 +1,6 @@
 <template>
       <div class="meLeft">
+        <a href="#" class="jiantou"><i class="icon iconfont icon-danjiantoushang"></i></a>
         <h1> For Me </h1>
         <table class="basic">
             <td align="right"><h2>"name" &nbsp:</h2></td>
@@ -98,7 +99,15 @@ a{
 }
 .meLeft>h1{
   text-align: center;
-  margin-top: 70px;
+  margin-top: 20px;
+  font-size: 50px;
+}
+.meLeft .jiantou{
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+}
+.meLeft .jiantou i{
   font-size: 50px;
 }
 .skill{

@@ -3,7 +3,7 @@
     <div class="userFont">
       <div class="imgbox">
         <h1>Wing的博客</h1>
-        <h2>在秃头的边缘试探</h2>
+        <h2>立志成为一名大佬</h2>
       </div>
     </div>
   </div>
