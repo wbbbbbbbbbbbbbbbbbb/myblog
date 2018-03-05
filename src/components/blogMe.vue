@@ -49,9 +49,6 @@ export default {
 
     }
   },
-  mounted() {
-    document.documentElement.scrollTop = document.body.scrollTop = 610;
-  }
 }
 </script>
 
